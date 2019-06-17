@@ -1,11 +1,19 @@
-import pytest
+from unittest import TestCase
 
 from project.hello_world import hello_world
 
-@pytest.mark.parametrize("argument_values", [True, 1, 1.0])
-def test_example(argument_values):
-    assert True == argument_values
+class NumbersTest(TestCase):
 
-def test_hello_world(): 
-    assert hello_world() == "Hello World!"
+    def test_even(self):
+        """
+        Test that numbers between 0 and 5 are all even.
+        """
+        for i in range(0, 6):
+            with self.subTest(i=i):
+                self.assertEqual(i % 2, 0)
+
+class HelloWorldTest(TestCase):
+    
+    def test_hello_world(self): 
+        self.assertEqual(hello_world() == "Hello World!", True)
 

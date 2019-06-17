@@ -1,5 +1,3 @@
 setuptools
 pip
-pytest
-pytest-cov
 
