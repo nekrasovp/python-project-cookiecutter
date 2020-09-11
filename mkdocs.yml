@@ -1,0 +1,6 @@
+site_name: project
+pages:
+  - Home: index.md
+  - Ref: mkdocs.md
+  - Roadmap: roadmap.md
+markdown_extensions: [ footnotes, smarty, abbr ]
